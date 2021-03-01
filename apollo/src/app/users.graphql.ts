@@ -1,11 +1,10 @@
-import { CreateUserInput } from './models/create-user.input';
 import { gql } from "apollo-angular";
 
-export const getUser = gql`
-  mutation GetUserMutation($createUserData: CreateUserInput!) {
+export const createUser = gql`
+  mutation CreateUserMutation($createUserData: CreateUserInput!) {
     createUser(createUserData: $createUserData) {
-      email
-      age
+      success
+      error
     }
   }
 `;

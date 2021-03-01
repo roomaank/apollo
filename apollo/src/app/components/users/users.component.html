@@ -1,1 +1,17 @@
-<p>users works!</p>
+<div class="container">
+  <form class="user__form" [formGroup]="usersForm">
+    <div class="inputs__wrapper">
+      <div class="input__block">
+        <label>Email</label>
+        <input type="email" formControlName="email" />
+      </div>
+      <div class="input__block">
+        <label>Age</label>
+        <input type="number" formControlName="age" />
+      </div>
+    </div>
+    <div class="button__wrapper">
+      <button class="button__save" (click)="saveFormData()">Save</button>
+    </div>
+  </form>
+</div>
